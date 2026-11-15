@@ -1,0 +1,11 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor settings
+.idea/
+.vscode/
+
+# Original user-provided screenshot (the extracted logo is in assets/)
+/Screenshot_2026-11-15-13-06-16-709_com.whatsapp.jpg
