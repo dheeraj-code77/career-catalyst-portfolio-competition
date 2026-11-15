@@ -4,6 +4,14 @@ A responsive portfolio-building competition website for Career Catalyst, present
 
 The site introduces the competition, explains the value of portfolios and Proof of Work, presents the participation steps, and links students to the official registration form.
 
+## Live website
+
+<https://dheeraj-code77.github.io/career-catalyst-portfolio-competition/>
+
+## Source repository
+
+<https://github.com/dheeraj-code77/career-catalyst-portfolio-competition>
+
 ## Features
 
 - Responsive layouts for desktop, laptop, tablet, and mobile.
