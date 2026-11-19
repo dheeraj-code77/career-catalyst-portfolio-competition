@@ -59,30 +59,37 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow institute"><span class="status-dot"></span><span>DISHA PLACEMENT CELL</span><i></i><span>IIT PATNA</span></p>
-          <h1 id="hero-title"><span>Build.</span><span class="accent">Showcase.</span><span>Grow.</span></h1>
+          <div class="hero-heading-actions">
+            <h1 id="hero-title"><span>Build.</span><span class="accent">Showcase.</span><span>Grow.</span></h1>
+            <a class="button apply-button" href="#registration">CLICK HERE TO APPLY <span>↗</span></a>
+          </div>
           <p class="hero-name">Career Catalyst</p>
           <p class="hero-description">
             A premier portfolio-building competition. Bring your work, skills and ideas together—and show the world what you can do.
           </p>
-          <a class="button button-primary" href="#introduction">Start the Journey <span>↗</span></a>
+          <div class="hero-video-wrap">
+            <video class="hero-video" id="career-catalyst-video" autoplay playsinline controls preload="auto" aria-label="Career Catalyst introduction video">
+              <source src="VID_20261119_151206_609-audio-compatible.mp4" type="video/mp4" />
+            </video>
+            <div class="video-audio-controls" role="group" aria-label="Video audio controls">
+              <button class="video-audio-toggle" id="video-audio-toggle" type="button" aria-controls="career-catalyst-video" aria-label="Mute video" aria-pressed="false" title="Mute video">
+                <svg class="speaker-icon" id="speaker-on-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a3.5 3.5 0 0 0-2-3.16v6.31a3.5 3.5 0 0 0 2-3.15zM14.5 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z" />
+                </svg>
+                <svg class="speaker-icon" id="speaker-muted-icon" viewBox="0 0 24 24" aria-hidden="true" hidden>
+                  <path d="M3 9v6h4l5 4V5L7 9H3zm13.59 3 2.12 2.12-1.42 1.42L15.17 13.4l-2.12 2.12-1.42-1.42L13.75 12l-2.12-2.12 1.42-1.42 2.12 2.12 2.12-2.12 1.42 1.42L16.59 12z" />
+                </svg>
+              </button>
+              <input class="video-volume-slider" id="video-volume-slider" type="range" min="0" max="100" step="1" value="100" aria-controls="career-catalyst-video" aria-label="Video volume" title="Video volume" />
+            </div>
+            <button class="video-play-fallback" id="video-play-fallback" type="button" aria-controls="career-catalyst-video" hidden>
+              Play with sound <span aria-hidden="true">▶</span>
+            </button>
+          </div>
           <div class="chapter-mark"><span>01 / YOUR NEXT CHAPTER</span><i></i></div>
+          <a class="button journey-start-button" href="#introduction">Start the Journey <span>↗</span></a>
         </div>
 
-        <div class="dossier-wrap" role="img" aria-label="A portfolio dossier visual">
-          <div class="dossier-shadow"></div>
-          <div class="dossier dossier-back dossier-back-one"></div>
-          <div class="dossier dossier-back dossier-back-two"></div>
-          <div class="dossier dossier-front">
-            <div class="dossier-top"><span class="dossier-logo">CC.</span><span>FIELD NOTES&nbsp; / &nbsp;001</span></div>
-            <p class="dossier-kicker">A RECORD OF WHAT YOU CAN DO</p>
-            <h2>Your work.<br /><em>Your story.</em></h2>
-            <div class="dossier-bottom"><span>PROJECTS&nbsp; · &nbsp;SKILLS&nbsp; · &nbsp;IDEAS</span><span>↗</span></div>
-          </div>
-          <div class="dossier-type"><span>MAKE</span><span>IT</span><span>COUNT</span></div>
-          <span class="dossier-caption">A PORTFOLIO THAT SPEAKS FOR YOU</span>
-          <span class="orbit-note">↗<small>01 / 03</small></span>
-        </div>
-        <div class="scroll-hint"><span class="scroll-line"></span>SCROLL TO EXPLORE</div>
       </section>
 
       <section class="intro-section" id="introduction" aria-labelledby="intro-title">
@@ -186,7 +193,7 @@
           <article class="step-card"><div class="step-top"><span>08</span><i>✦</i></div><h3>TOP THREE WINNERS</h3><p>Winners are announced and receive public recognition and a dedicated shout-out.</p></article>
         </div>
         <div class="pathway-actions">
-          <a class="button button-primary" href="#registration">I’m ready to participate <span>↗</span></a>
+          <a class="button button-primary" href="#registration">I'm Ready to Participate <span>↗</span></a>
         </div>
       </section>
 

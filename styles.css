@@ -42,16 +42,34 @@ button { font: inherit; }
 .theme-toggle { width: clamp(62px, 4.2vw, 74px); height: clamp(62px, 4.2vw, 74px); display: grid; place-items: center; color: #314457; font-size: 26px; border-radius: 50%; cursor: pointer; transition: transform .2s ease; }
 .theme-toggle:hover { transform: rotate(20deg); }
 
-.hero { position: relative; width: min(1300px, calc(100% - 88px)); min-height: 740px; margin: 6px auto 0; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 36px; }
-.hero-copy { position: relative; z-index: 1; padding: 12px 0 36px; }
+.hero { position: relative; width: min(1300px, calc(100% - 88px)); min-height: 0; margin: 6px auto 0; display: block; }
+.hero-copy { position: relative; z-index: 1; width: 100%; max-width: none; padding: 12px 0 36px; }
 .eyebrow { margin: 0; color: #ce967d; font-size: 9px; font-weight: 700; letter-spacing: 1.65px; line-height: 1.7; }
 .institute { display: flex; align-items: center; gap: 16px; color: var(--orange-soft); font: 700 11px "Space Grotesk", sans-serif; letter-spacing: 2.4px; }
 .institute i { width: 50px; height: 1px; background: rgba(255,140,90,.65); }
 .status-dot { width: 7px; height: 7px; margin-right: 3px; border-radius: 50%; background: #4bc7a0; box-shadow: 0 0 14px rgba(75,199,160,.45); }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2 { font-family: "Space Grotesk", Inter, sans-serif; }
-.hero h1 { display: flex; flex-direction: column; margin: 22px 0 24px; font-size: clamp(72px, 7.5vw, 108px); font-weight: 700; letter-spacing: -.085em; line-height: .94; }
+.hero-heading-actions { display: flex; align-items: flex-end; gap: clamp(24px, 3vw, 48px); }
+.hero h1 { display: flex; flex-direction: column; flex: 0 0 auto; width: fit-content; margin: 22px 0 24px; font-size: clamp(72px, 7.5vw, 108px); font-weight: 700; letter-spacing: -.085em; line-height: .94; }
 .hero h1 .accent { color: var(--orange); }
+.apply-button { flex: 0 0 auto; min-height: 54px; margin: 0 0 12px; padding: 0 22px; border: 0; border-radius: 999px; color: #fff !important; background: var(--orange); box-shadow: 0 10px 28px rgba(255,140,90,.34), 0 0 24px rgba(255,140,90,.18); font-size: 13px; }
+.apply-button:hover { background: #ff9a6d; transform: translateY(-2px); box-shadow: 0 13px 32px rgba(255,140,90,.42), 0 0 28px rgba(255,140,90,.22); }
+.hero-video-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 4px 0 0; overflow: hidden; border-radius: 18px; background: #152235; }
+.hero-video { display: block; width: 100%; height: 100%; object-fit: contain; background: #152235; }
+.video-audio-controls { position: absolute; z-index: 2; top: 12px; right: 12px; display: flex; align-items: center; gap: 8px; padding: 5px 9px 5px 5px; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; color: #fff; background: rgba(18,30,42,.86); box-shadow: 0 4px 14px rgba(0,0,0,.2); }
+.video-audio-toggle { width: 38px; height: 38px; display: grid; place-items: center; flex: 0 0 auto; padding: 0; border: 0; border-radius: 50%; color: inherit; background: transparent; cursor: pointer; }
+.video-audio-toggle:hover { background: rgba(255,255,255,.15); }
+.video-audio-toggle:focus-visible, .video-volume-slider:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.speaker-icon { width: 21px; height: 21px; fill: currentColor; }
+.speaker-icon[hidden] { display: none; }
+.video-volume-slider { width: 82px; height: 24px; margin: 0; accent-color: var(--orange); cursor: pointer; touch-action: pan-y; }
+.video-play-fallback { position: absolute; top: 50%; left: 50%; display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 56px; padding: 0 24px; transform: translate(-50%, -50%); border: 1px solid rgba(255,255,255,.55); border-radius: 999px; color: #fff; background: rgba(18,30,42,.92); box-shadow: 0 10px 32px rgba(0,0,0,.3); font: 700 14px Inter, Arial, sans-serif; cursor: pointer; }
+.video-play-fallback:hover { background: #243746; }
+.video-play-fallback:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+.video-play-fallback[hidden] { display: none; }
+.journey-start-button { width: fit-content; min-height: 48px; margin: 18px auto 0; padding: 0 22px; border: 1px solid rgba(32,42,53,.18); border-radius: 999px; color: var(--ink) !important; background: rgba(255,255,255,.35); box-shadow: none; font-size: 11px; display: flex; }
+.journey-start-button:hover { color: var(--ink) !important; background: rgba(255,255,255,.68); transform: translateY(-1px); }
 .hero-name { margin-bottom: 12px; font-size: 19px; font-weight: 700; letter-spacing: -.5px; }
 .hero-description { max-width: 525px; margin-bottom: 25px; color: var(--muted); font-size: 15px; line-height: 1.85; }
 .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 18px; border-radius: 9px; font-size: 12px; font-weight: 800; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
@@ -147,6 +165,7 @@ h1, h2 { font-family: "Space Grotesk", Inter, sans-serif; }
 .pathway-heading > p { max-width: 390px; margin: 0 0 8px; color: var(--muted); font-size: 13px; line-height: 1.8; }
 .pathway h2 { margin-bottom: 0; font-size: clamp(48px, 5vw, 65px); }
 .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+.pathway-actions { display: flex; justify-content: center; margin-top: 28px; }
 .step-card { min-width: 0; min-height: 245px; padding: 24px 23px 22px; border: 1px solid rgba(255,255,255,.82); border-radius: 12px; background: rgba(255,255,255,.62); box-shadow: var(--shadow); transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease; -webkit-tap-highlight-color: transparent; }
 .step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 27px; color: var(--orange); font: 600 16px "Space Grotesk", sans-serif; }
 .step-top i { font-style: normal; font-size: 17px; }
@@ -207,9 +226,11 @@ h1, h2 { font-family: "Space Grotesk", Inter, sans-serif; }
   .main-nav { gap: clamp(18px, 3vw, 28px); }
   .main-nav a { font-size: 11px; }
   .theme-toggle { width: 46px; height: 46px; }
-  .hero { width: calc(100% - 52px); min-height: 0; grid-template-columns: minmax(0, 1fr); align-items: start; gap: 0; margin-top: 28px; padding-bottom: 36px; }
+  .hero { width: calc(100% - 52px); min-height: 0; display: block; margin-top: 28px; padding-bottom: 36px; }
   .hero-copy { max-width: 680px; padding: 22px 0 0; }
+  .hero-heading-actions { gap: 20px; }
   .hero h1 { font-size: clamp(64px, 9vw, 82px); }
+  .apply-button { min-height: 50px; margin-bottom: 8px; font-size: 11px; }
   .dossier-wrap { width: min(100%, 600px); min-height: 460px; margin: 0 auto; }
   .dossier { width: 230px; height: 310px; }
   .dossier-front h2 { font-size: 22px; }
@@ -241,12 +262,17 @@ h1, h2 { font-family: "Space Grotesk", Inter, sans-serif; }
   .main-nav { min-width: 0; min-height: clamp(34px, 9.2vw, 38px); flex: 1; justify-content: space-around; gap: clamp(2px, 1vw, 5px); padding: 0 clamp(6px, 2vw, 9px); border-radius: 20px; }
   .main-nav a { font-size: clamp(7.5px, 2.15vw, 9px); white-space: nowrap; }
   .theme-toggle { flex: 0 0 auto; width: clamp(34px, 9.2vw, 38px); height: clamp(34px, 9.2vw, 38px); font-size: 15px; }
-  .hero { width: calc(100% - 28px); min-height: 835px; grid-template-columns: 1fr; align-content: start; gap: 0; margin-top: 25px; }
+  .hero { width: calc(100% - 28px); min-height: 0; display: block; margin-top: 25px; padding-bottom: 28px; }
   .hero-copy { padding: 15px 0 0; }
   .institute { gap: 9px; font-size: 7px; letter-spacing: 1.45px; }
   .institute i { width: 28px; }
   .status-dot { width: 6px; height: 6px; }
+  .hero-heading-actions { display: block; }
   .hero h1 { margin: 17px 0 17px; font-size: clamp(56px, 15.8vw, 66px); line-height: .96; letter-spacing: -.085em; }
+  .apply-button { min-height: 44px; margin: 0 0 20px auto; padding: 0 16px; font-size: 10px; }
+  .hero-video-wrap { border-radius: 13px; }
+  .video-play-fallback { min-height: 48px; padding: 0 18px; font-size: 12px; }
+  .journey-start-button { min-height: 42px; margin-top: 16px; padding: 0 16px; font-size: 9px; }
   .hero-name { margin-bottom: 9px; font-size: 14px; }
   .hero-description { max-width: 350px; margin-bottom: 18px; font-size: 11px; line-height: 1.85; }
   .button { min-height: 40px; gap: 11px; font-size: 9px; }

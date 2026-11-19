@@ -20,6 +20,7 @@ The site introduces the competition, explains the value of portfolios and Proof 
   1. Start the Journey → Quick Introduction
   2. Next: How to Apply → the eight participation steps
   3. I'm Ready to Participate → registration
+- Autoplay introduction video with visible native controls and dedicated audio controls.
 - Interactive hover and pressed states on competition and participation cards.
 - Registration through the official Microsoft Forms link: <https://forms.cloud.microsoft/r/XcKHw0eNt4>.
 - No build step, framework, or package installation is required.
@@ -40,6 +41,8 @@ Then open <http://127.0.0.1:4173/> in a browser.
 .
 ├── assets/
 │   └── career-catalyst-logo.png
+├── VID_20261119_151206_609.mp4
+├── VID_20261119_151206_609-audio-compatible.mp4
 ├── index.html
 ├── script.js
 ├── styles.css
@@ -49,6 +52,7 @@ Then open <http://127.0.0.1:4173/> in a browser.
 ```
 
 The supplied source screenshot used to extract the logo is excluded from version control; only the cropped logo used by the site is included.
+The original video is preserved; the website serves the audio-compatible derivative.
 
 ## Publish with GitHub Pages
 
